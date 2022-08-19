@@ -25,11 +25,15 @@ function App() {
     const onClickgetAddress = () => {
         KlipAPI.getAddress(setQrValue);
     }
+    const onClicksetCount = () => {
+        KlipAPI.setCount(2000,setQrValue);
+    }
     //readCount()
     //getBalance('0xFA2DBE992dd0D021f815c8c897d6661CAAF60845')
     return (
         <div className="App">
             <button onClick={() => onClickgetAddress()}>주소 가져오기</button>
+            <button onClick={() => onClicksetCount()}>카운트 변경</button>
             <br />
             <QRCode value={qrvalue} />
         </div>
